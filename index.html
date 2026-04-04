@@ -4,9 +4,32 @@
         <title>OM MADHAVI PORTFOLIO</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
         
+        <style>
+            /* Layout Fixes for Portrait and Mobile */
+            #banner .portrait img {
+                width: 280px; 
+                height: 373px; 
+                border-radius: 10px; 
+                border: 4px solid rgba(255,255,255,0.1); 
+                object-fit: cover; 
+                box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            }
+
+            @media screen and (max-width: 980px) {
+                #banner .inner { 
+                    flex-direction: column !important; 
+                    text-align: center !important; 
+                    gap: 2em !important; 
+                }
+                #banner .portrait img { 
+                    width: 220px !important; 
+                    height: auto !important; 
+                }
+            }
+        </style>
     </head>
     <body class="is-preload">
 
@@ -21,27 +44,31 @@
                 <div class="inner">
                     <h2>Navigation</h2>
                     <ul class="links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#project-gallery" class="button primary fit">Project Gallery</a></li>
-    <li><a href="#four">Technical Expertise</a></li> <li><a href="#contact-section">Contact Me</a></li>
-</ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#project-gallery" class="button primary fit">Project Gallery</a></li>
+                        <li><a href="#four">Technical Expertise</a></li>
+                        <li><a href="#contact-section">Contact Me</a></li>
+                    </ul>
                     <a href="#" class="close">Close</a>
                 </div>
             </nav>
 
             <section id="banner" style="display: flex; justify-content: center; align-items: center; text-align: left; padding: 4em 0;">
                 <div class="inner" style="display: flex; flex-direction: row; gap: 4em; align-items: center;">
+                    
                     <div class="portrait" style="flex: 0 0 auto;">
-                        <img src="images/om_madhavi.jpg" alt="Om Madhavi" style="width: 280px; height: 373px; border-radius: 10px; border: 4px solid rgba(255,255,255,0.1); object-fit: cover; box-shadow: 0 15px 35px rgba(0,0,0,0.4);" />
+                        <img src="./images/om_madhavi.jpg" alt="Om Madhavi" />
                     </div>
+
                     <div class="content" style="flex: 1 1 auto; max-width: 600px;">
-                        <div class="logo"><span class="icon fa-chart-bar" style="margin-bottom: 0.5em;"></span></div>
+                        <div class="logo"><span class="icon fa-chart-bar"></span></div>
                         <h2 style="font-size: 2.2em; margin-bottom: 0.2em;">OM MADHAVI</h2>
                         <h3 style="font-size: 1.1em; color: #7fbbca; margin-bottom: 1.5em; opacity: 0.9;">DATA ANALYST</h3>
                         <p style="font-size: 0.9em; margin-bottom: 1.5em;">Transforming complex datasets into scalable, high-impact strategic insights. Based in Thane, Maharashtra.</p>
+                        
                         <ul class="actions">
-                            <li><a href="#project-gallery" class="button">View All Projects</a></li>
-                            <li><a href="https://www.linkedin.com/in/om-madhavi-6845b2327/" target="_blank" class="button icon brands fa-linkedin">Connect on LinkedIn</a></li>
+                            <li><a href="#project-gallery" class="button primary">View All Projects</a></li>
+                            <li><a href="https://www.linkedin.com/in/om-madhavi-6845b2327/" target="_blank" class="button icon brands fa-linkedin">LinkedIn</a></li>
                         </ul>
                     </div>
                 </div>
@@ -51,10 +78,10 @@
 
                 <section id="one" class="wrapper spotlight style1">
                     <div class="inner">
-                        <a href="#" class="image"><img src="images/pic011.png" alt="Football" /></a>
+                        <a href="#" class="image"><img src="./images/pic011.png" alt="Football Analytics" /></a>
                         <div class="content">
                             <h2 class="major">Football One Step Ahead</h2>
-                            <p>Engineered an end-to-end BI pipeline analyzing 15,000+ European football players. The interactive Power BI dashboard mapped €5B+ in transfer market valuations, successfully isolating a targeted shortlist of 50 highly undervalued assets.</p>
+                            <p>Engineered an end-to-end BI pipeline analyzing 15,000+ European football players. The interactive Power BI dashboard mapped €5B+ in transfer market valuations, successfully isolating 50 undervalued assets.</p>
                             <a href="https://github.com/om19work" target="_blank" class="special">View Project</a>
                         </div>
                     </div>
@@ -62,7 +89,7 @@
 
                 <section id="two" class="wrapper alt spotlight style2">
                     <div class="inner">
-                        <a href="#" class="image"><img src="images/pic022.png" alt="Music" /></a>
+                        <a href="#" class="image"><img src="./images/pic022.png" alt="Music Recommendation" /></a>
                         <div class="content">
                             <h2 class="major">Scalable Hybrid Music Recommendation System</h2>
                             <p>Architected a recommendation engine processing 50M+ user interactions using Apache Spark and FastAPI. Improved accuracy by 28% through hybrid filtering and audio feature analysis.</p>
@@ -73,7 +100,7 @@
 
                 <section id="three" class="wrapper spotlight style3">
                     <div class="inner">
-                        <a href="#" class="image"><img src="images/pic033.png" alt="Jobs" /></a>
+                        <a href="#" class="image"><img src="./images/pic033.png" alt="Job Market Intelligence" /></a>
                         <div class="content">
                             <h2 class="major">Cloud-Native Job Market Intelligence</h2>
                             <p>Automated ETL pipeline extracting 15,000+ tech job postings daily via AWS and Apache Airflow. Delivers real-time salary and skill trend tracking through a custom Streamlit dashboard.</p>
@@ -96,16 +123,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td><b>Supply Chain</b></td><td>Predicting shipping delays and port congestion before they happen.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>Healthcare</b></td><td>Identifying high-risk patients to reduce hospital return rates.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>E-commerce</b></td><td>Spotting customers likely to leave and calculating their long-term value.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>Energy</b></td><td>Forecasting city power demand to prevent blackouts and save energy.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>Marketing</b></td><td>Proving which ads actually drive sales to save on advertising costs.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>Retail</b></td><td>Automatically adjusting prices based on what competitors are doing.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>HR Analytics</b></td><td>Predicting which top employees might quit and why they are unhappy.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>Product</b></td><td>Testing new app features automatically to see what users actually like.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>Agriculture</b></td><td>Using satellite data to predict crop shortages and farm yields.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
-                                    <tr><td><b>Data Engineering</b></td><td>Building an "Alarm System" that stops bad data from breaking reports.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>Supply Chain</b></td><td>Predicting shipping delays and port congestion.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>Healthcare</b></td><td>Identifying high-risk patients to reduce return rates.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>E-commerce</b></td><td>Spotting customer churn and calculating LTV.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>Energy</b></td><td>Forecasting city power demand to prevent blackouts.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>Marketing</b></td><td>Proving ad attribution to optimize spend.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>Retail</b></td><td>Automated dynamic pricing based on competitors.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>HR Analytics</b></td><td>Predicting employee attrition and sentiment.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>Product</b></td><td>A/B testing app features for user engagement.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>Agriculture</b></td><td>Satellite-driven crop yield prediction.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
+                                    <tr><td><b>Data Engineering</b></td><td>Building data quality monitoring systems.</td><td style="text-align: center;"><a href="#" class="button small">Case Study</a></td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -131,21 +158,6 @@
                                 <strong style="display: block;">Visualization</strong>
                                 <span style="font-size: 0.8em; color: #888;">Tableau | Power BI</span>
                             </div>
-                            <div class="tool-icon" style="text-align: center; width: calc(33.33% - 2em);">
-                                <span class="icon solid fa-file-excel" style="font-size: 3em; color: #5cb85c;"></span>
-                                <strong style="display: block;">Advanced Excel</strong>
-                                <span style="font-size: 0.8em; color: #888;">Pivots | Dashboards</span>
-                            </div>
-                            <div class="tool-icon" style="text-align: center; width: calc(33.33% - 2em);">
-                                <span class="icon solid fa-square-root-alt" style="font-size: 3em; color: #ca392b;"></span>
-                                <strong style="display: block;">Statistics</strong>
-                                <span style="font-size: 0.8em; color: #888;">Hypothesis Testing</span>
-                            </div>
-                            <div class="tool-icon" style="text-align: center; width: calc(33.33% - 2em);">
-                                <span class="icon solid fa-cloud" style="font-size: 3em; color: #9b59b6;"></span>
-                                <strong style="display: block;">Cloud (AWS/GCP)</strong>
-                                <span style="font-size: 0.8em; color: #888;">ETL | Airflow</span>
-                            </div>
                         </section>
                     </div>
                 </section>
@@ -157,44 +169,29 @@
                                 <h2 class="major">Direct Message</h2>
                                 <form method="post" action="https://formspree.io/f/xqegyojw">
                                     <div class="fields">
-                                        <div class="field">
-                                            <label for="name">Name</label>
-                                            <input type="text" name="name" id="name" placeholder="Your Name" />
-                                        </div>
-                                        <div class="field">
-                                            <label for="email">Email</label>
-                                            <input type="email" name="email" id="email" placeholder="email@example.com" />
-                                        </div>
-                                        <div class="field">
-                                            <label for="message">Message</label>
-                                            <textarea name="message" id="message" rows="4" placeholder="How can my data insights help your project?"></textarea>
-                                        </div>
+                                        <div class="field"><label for="name">Name</label><input type="text" name="name" id="name" /></div>
+                                        <div class="field"><label for="email">Email</label><input type="email" name="email" id="email" /></div>
+                                        <div class="field"><label for="message">Message</label><textarea name="message" id="message" rows="4"></textarea></div>
                                     </div>
                                     <ul class="actions">
                                         <li><input type="submit" value="Send Message" class="primary" /></li>
                                     </ul>
                                 </form>
                             </div>
-
                             <div class="col-6 col-12-medium">
                                 <h2 class="major">Contact Information</h2>
-                                <p>Based in Thane, I am open to remote opportunities and local collaborations across Mumbai.</p>
                                 <ul class="contact">
                                     <li class="icon solid fa-home">Thane, Maharashtra, India</li>
                                     <li class="icon solid fa-phone">(+91) 9152531011</li>
                                     <li class="icon solid fa-envelope"><a href="mailto:om19work@gmail.com">om19work@gmail.com</a></li>
-                                    <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/om-madhavi-6845b2327/" target="_blank">LinkedIn Profile</a></li>
-                                    <li class="icon brands fa-github"><a href="https://github.com/om19work" target="_blank">GitHub Portfolio</a></li>
-                                </ul>
-                                <ul class="actions">
-                                    <li><a href="#header" class="button icon solid fa-chevron-up">Back to Top</a></li>
+                                    <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/om-madhavi-6845b2327/" target="_blank">LinkedIn</a></li>
+                                    <li class="icon brands fa-github"><a href="https://github.com/om19work" target="_blank">GitHub</a></li>
                                 </ul>
                             </div>
                         </div>
-
                         <ul class="copyright">
                             <li>&copy; Om Madhavi. All rights reserved.</li>
-                            
+                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
                         </ul>
                     </div>
                 </section>
@@ -202,12 +199,12 @@
             </section>
         </div>
 
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/jquery.scrollex.min.js"></script>
+        <script src="./assets/js/browser.min.js"></script>
+        <script src="./assets/js/breakpoints.min.js"></script>
+        <script src="./assets/js/util.js"></script>
+        <script src="./assets/js/main.js"></script>
 
     </body>
 </html>
